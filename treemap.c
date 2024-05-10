@@ -188,6 +188,7 @@ Pair * nextTreeMap(TreeMap * tree) {
         {
             aux = aux->left;
         }
+        tree->current = aux;
         return aux->pair;
     }
     else
@@ -198,6 +199,7 @@ Pair * nextTreeMap(TreeMap * tree) {
             aux = aux2;
             aux2 = aux2->parent;
         }
+        tree->current = aux2;
         return aux2->pair;
     }
     return NULL;
